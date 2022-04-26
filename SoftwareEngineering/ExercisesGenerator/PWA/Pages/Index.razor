@@ -1,0 +1,117 @@
+﻿@page "/"
+
+@inject NavigationManager NavigationManager
+
+<AntDesign.Title Level="1" Style="display:table;margin:0 auto;">
+    运算<sup>++</sup>
+</AntDesign.Title>
+
+<Row>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("generator")'>
+            <Card Bordered Cover="coverGenerator" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleGenerator" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("settings")'>
+            <Card Bordered Cover="coverSetting" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleSetting" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("exercise")'>
+            <Card Bordered Cover="coverExercise" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleExercise" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("wrongs")'>
+            <Card Bordered Cover="coverWrongs" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleWrongs" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("statist")'>
+            <Card Bordered Cover="coverStatist" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleStatist" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+    <GridCol Xs="@Property(10,2)" Lg="Property(6,2)" Style="margin-bottom:20px">
+        <div @onclick='() => NavigationManager.NavigateTo("about")'>
+            <Card Bordered Cover="coverAbout" Style="background-color:#e2e1e4">
+                <ChildContent>
+                    <CardMeta TitleTemplate="@titleAbout" />
+                </ChildContent>
+            </Card>
+        </div>
+    </GridCol>
+</Row>
+
+@code
+{
+    EmbeddedProperty Property(int span, int offset) => new() { Span = span, Offset = offset };
+
+    RenderFragment titleGenerator =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        出题
+    </AntDesign.Title>;
+
+    RenderFragment titleSetting =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        设置
+    </AntDesign.Title>;
+
+    RenderFragment titleExercise =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        自测
+    </AntDesign.Title>;
+
+    RenderFragment titleWrongs =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        错题集
+    </AntDesign.Title>;
+
+    RenderFragment titleStatist =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        统计
+    </AntDesign.Title>;
+
+    RenderFragment titleAbout =
+    @<AntDesign.Title Level="4"
+                      Style="display:table;margin:0 auto;color:#4d4030">
+        关于
+    </AntDesign.Title>;
+
+    RenderFragment coverGenerator = @<img alt="出题" src="src/Generator.png" />;
+
+    RenderFragment coverSetting = @<img alt="设置" src="src/Setting.png" />;
+
+    RenderFragment coverExercise = @<img alt="自测" src="src/Exercise.png" />;
+
+    RenderFragment coverWrongs = @<img alt="错题集" src="src/Wrongs.png" />;
+
+    RenderFragment coverStatist = @<img alt="统计" src="src/Statist.png" />;
+
+    RenderFragment coverAbout = @<img alt="关于" src="src/About.png" />;
+}

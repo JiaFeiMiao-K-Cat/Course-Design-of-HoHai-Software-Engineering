@@ -1,0 +1,196 @@
+﻿@page "/se"
+
+@inject IJSRuntime JS
+
+@inject NavigationManager NavigationManager
+
+<Affix OffsetTop="@(0)">
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("")'>
+        <Icon Type="home" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("generator")'>
+        <Icon Type="profile" Theme="outline" Style="font-size:x-large" />
+    </Button>
+</Affix>
+
+<Form Model="@model" LabelColSpan="6" WrapperColSpan="16">
+    <FormItem Label=@("请选择单元 ")>
+        <Cascader Options="@defaultNodes" @bind-Value="model.value"
+                  Size="large" ChangeOnSelect="true" SelectedNodesChanged="OnChange">
+        </Cascader>
+    </FormItem>
+    <FormItem Label=@("题目数量 ")>
+        <AntDesign.InputNumber @bind-Value="@model.settings.ProblemsNumber" Min="0" Max="1000">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label=@("思考时间(s) ")>
+        <AntDesign.InputNumber @bind-Value="@model.settings.ThinkTime" Min="0" Max="300">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label=@("运算符个数 ")>
+        <AntDesign.InputNumber @bind-Value="@Invoke" Min="1" Max="3">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label=@("允许括号 ")>
+        <Switch @bind-Value="@model.settings.AllowParentheses"
+                CheckedChildren="是" UnCheckedChildren="否" />
+    </FormItem>
+    <FormItem Label=@("允许分数 ")>
+        <Switch @bind-Value="@model.settings.AllowFraction"
+                CheckedChildren="是" UnCheckedChildren="否" />
+    </FormItem>
+    @for (int i = 1; i <= Invoke; i++)
+    {
+        int index = i;
+        <FormItem Label=@("操作数 " + index + " 设置")>
+            <FormItem Label="类型">
+                <Select DataSource="@types"
+                        @bind-Value="@model.settings.Operands[index - 1].OperandType"
+                        ValueName="@nameof(MyType.Value)"
+                        LabelName="@nameof(MyType.Name)">
+                </Select>
+            </FormItem>
+            <FormItem Label=@("整数最小值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].IntegerMinimize"
+                                       Min="0" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+            <FormItem Label=@("整数最大值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].IntegerMaximum"
+                                       Min="0" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+            <FormItem Label=@("分子最小值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].NumeratorMinimize"
+                                       Min="0" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+            <FormItem Label=@("分子最大值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].NumeratorMaximum"
+                                       Min="0" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+            <FormItem Label=@("分母最小值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].DenominationMinimize"
+                                       Min="2" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+            <FormItem Label=@("分母最大值 ")>
+                <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index - 1].DenominationMaximum"
+                                       Min="2" Max="1000000">
+                </AntDesign.InputNumber>
+            </FormItem>
+        </FormItem>
+        <FormItem Label=@("运算符 " + index + " 设置")>
+            <FormItem Label=@("允许加法 ")>
+                <Switch @bind-Value="@model.settings.Operators[index - 1].AllowPlus"
+                        CheckedChildren="是" UnCheckedChildren="否" />
+            </FormItem>
+            <FormItem Label=@("允许减法 ")>
+                <Switch @bind-Value="@model.settings.Operators[index - 1].AllowSubscribe"
+                        CheckedChildren="是" UnCheckedChildren="否" />
+            </FormItem>
+            <FormItem Label=@("允许乘法 ")>
+                <Switch @bind-Value="@model.settings.Operators[index - 1].AllowMultiply"
+                        CheckedChildren="是" UnCheckedChildren="否" />
+            </FormItem>
+            <FormItem Label=@("允许除法 ")>
+                <Switch @bind-Value="@model.settings.Operators[index - 1].AllowDivide"
+                        CheckedChildren="是" UnCheckedChildren="否" />
+            </FormItem>
+        </FormItem>
+        if (i == Invoke)
+        {
+            <FormItem Label=@("操作数 " + (index + 1) + " 设置")>
+                <FormItem Label="类型">
+                    <Select DataSource="@types"
+                            @bind-Value="@model.settings.Operands[index].OperandType"
+                            ValueName="@nameof(MyType.Value)"
+                            LabelName="@nameof(MyType.Name)">
+                    </Select>
+                </FormItem>
+                <FormItem Label=@("整数最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].IntegerMinimize"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("整数最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].IntegerMaximum"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分子最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].NumeratorMinimize"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分子最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].NumeratorMaximum"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分母最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].DenominationMinimize"
+                                           Min="2" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分母最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index].DenominationMaximum"
+                                           Min="2" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+            </FormItem>
+            <FormItem Label=@("答案设置")>
+                <FormItem Label="类型">
+                    <Select DataSource="@types"
+                            @bind-Value="@model.settings.Operands[index + 1].OperandType"
+                            ValueName="@nameof(MyType.Value)"
+                            LabelName="@nameof(MyType.Name)">
+                    </Select>
+                </FormItem>
+                <FormItem Label=@("整数最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].IntegerMinimize"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("整数最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].IntegerMaximum"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分子最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].NumeratorMinimize"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分子最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].NumeratorMaximum"
+                                           Min="0" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分母最小值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].DenominationMinimize"
+                                           Min="2" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+                <FormItem Label=@("分母最大值 ")>
+                    <AntDesign.InputNumber @bind-Value="@model.settings.Operands[index + 1].DenominationMaximum"
+                                           Min="2" Max="1000000">
+                    </AntDesign.InputNumber>
+                </FormItem>
+            </FormItem>
+        }
+    }
+    <FormItem WrapperColOffset="6" WrapperColSpan="16">
+        <Button Type="@ButtonType.Primary" Icon="@IconType.Outline.Save" OnClick="SaveSetting"
+                HtmlType="submit" Size="ButtonSize.Large">
+            保存设置
+        </Button>
+    </FormItem>
+</Form>
+
+<TextArea Rows="20" Value="@JSON" />

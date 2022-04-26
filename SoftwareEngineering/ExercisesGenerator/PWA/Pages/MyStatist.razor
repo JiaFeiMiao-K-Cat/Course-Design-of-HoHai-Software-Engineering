@@ -1,0 +1,57 @@
+﻿@page "/statist"
+@inject IIndexedDbFactory DbFactory
+
+@inject IJSRuntime JS
+
+@inject NavigationManager NavigationManager
+
+<Spin Spinning=@IsLoading Delay=0>
+    <Affix OffsetTop="@(0)">
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("")'>
+            <Icon Type="home" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("settings")'>
+            <Icon Type="setting" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("generator")'>
+            <Icon Type="profile" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("exercise")'>
+            <Icon Type="edit" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("wrongs")'>
+            <Icon Type="close-square" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("about")'>
+            <Icon Type="info" Theme="outline" Style="font-size:x-large" />
+        </Button>
+    </Affix>
+
+    <Tabs ActiveKeyChanged="OnTabChanged">
+        <TabPane Key="1">
+            <TabTemplate>做题情况</TabTemplate>
+            <ChildContent>
+                <AntDesign.Charts.Line @ref="@chart" Data="ExerciseData" Config="@configExercise" />
+            </ChildContent>
+        </TabPane>
+        <TabPane Key="2">
+            <TabTemplate>错题重做情况</TabTemplate>
+            <ChildContent>
+                <AntDesign.Charts.Line Data="RedoData" Config="@configRedo" />
+            </ChildContent>
+        </TabPane>
+    </Tabs>
+    <Button OnClick="ChangeData">更新数据</Button>
+</Spin>

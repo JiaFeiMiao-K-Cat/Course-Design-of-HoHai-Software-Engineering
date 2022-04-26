@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\PWA\\PWA.csproj": {}
+  },
+  "projects": {
+    "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\PWA\\PWA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\PWA\\PWA.csproj",
+        "projectName": "PWA",
+        "projectPath": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\PWA\\PWA.csproj",
+        "packagesPath": "C:\\Users\\xuzhe\\.nuget\\packages\\",
+        "outputPath": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\PWA\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xuzhe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\Tools.csproj": {
+                "projectPath": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AntDesign": {
+              "target": "Package",
+              "version": "[0.10.2, )"
+            },
+            "AntDesign.Charts": {
+              "target": "Package",
+              "version": "[0.2.2, )"
+            },
+            "IndexedDB.Blazor": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
+              "version": "[5.0.15, 5.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\Tools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\Tools.csproj",
+        "projectName": "Tools",
+        "projectPath": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\Tools.csproj",
+        "packagesPath": "C:\\Users\\xuzhe\\.nuget\\packages\\",
+        "outputPath": "E:\\TeamProgramming\\TeamProgramming-ExercisesGenerator\\ExercisesGenerator\\Tools\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\xuzhe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

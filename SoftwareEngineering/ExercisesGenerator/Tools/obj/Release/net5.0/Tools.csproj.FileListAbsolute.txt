@@ -1,0 +1,12 @@
+D:\TeamProgramming\ExercisesGenerator\Tools\bin\Release\net5.0\Tools.deps.json
+D:\TeamProgramming\ExercisesGenerator\Tools\bin\Release\net5.0\Tools.dll
+D:\TeamProgramming\ExercisesGenerator\Tools\bin\Release\net5.0\ref\Tools.dll
+D:\TeamProgramming\ExercisesGenerator\Tools\bin\Release\net5.0\Tools.pdb
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.csproj.AssemblyReference.cache
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.AssemblyInfoInputs.cache
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.AssemblyInfo.cs
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.csproj.CoreCompileInputs.cache
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.dll
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\ref\Tools.dll
+D:\TeamProgramming\ExercisesGenerator\Tools\obj\Release\net5.0\Tools.pdb

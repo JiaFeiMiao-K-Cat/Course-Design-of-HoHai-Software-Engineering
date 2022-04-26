@@ -1,0 +1,220 @@
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.124, 4847892528443, datacollector.dll, Version: 16.11.0
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.129, 4847892564682, datacollector.dll, DataCollectorMain.Run: Starting data collector run with args: --port,63869,--parentprocessid,75824,--diag,D:\PairCoding\pair-coding-project-a_team\ExercisesGenerator\ToolsUnitTest\bin\Release\net5.0\fine-code-coverage\coverage-tool-output\diagnostics.datacollector.21-10-23_10-56-53_92252_4.log,--tracelevel,4
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.129, 4847892567317, datacollector.dll, DataCollector: Monitoring parent process with id: '75824'
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.139, 4847892667599, datacollector.dll, Trying to connect to server on socket : 127.0.0.1:63869 
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.168, 4847892956500, datacollector.dll, SocketCommunicationManager : SetupClientAsync : Attempting to connect to the server.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:54.177, 4847893045145, datacollector.dll, Connected to the server successfully 
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:54.177, 4847893046761, datacollector.dll, Using the buffer size of 16384 bytes
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.253, 4847893804443, datacollector.dll, DataCollector: Start Request Processing.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.259, 4847893858070, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.BeforeTestRunStart) -> {
+  "SettingsXml": "<RunSettings><RunConfiguration><ResultsDirectory>D:\\PairCoding\\pair-coding-project-a_team\\ExercisesGenerator\\ToolsUnitTest\\bin\\Release\\net5.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory><TargetPlatform>X64</TargetPlatform><TargetFrameworkVersion>.NETCoreApp,Version=v5.0</TargetFrameworkVersion><DesignMode>False</DesignMode><CollectSourceInformation>False</CollectSourceInformation><TestAdaptersPaths>C:\\Program Files\\dotnet\\sdk\\5.0.402\\Extensions</TestAdaptersPaths></RunConfiguration><LoggerRunSettings><Loggers><Logger friendlyName=\"blame\" enabled=\"True\" /><Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\5.0.402\\vstest.console.dll\" enabled=\"True\" /></Loggers></LoggerRunSettings><DataCollectionRunSettings><DataCollectors><DataCollector friendlyName=\"blame\" enabled=\"True\"><Configuration><ResultsDirectory>D:\\PairCoding\\pair-coding-project-a_team\\ExercisesGenerator\\ToolsUnitTest\\bin\\Release\\net5.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory></Configuration></DataCollector></DataCollectors></DataCollectionRunSettings></RunSettings>",
+  "Sources": [
+    "D:\\PairCoding\\pair-coding-project-a_team\\ExercisesGenerator\\ToolsUnitTest\\bin\\Release\\net5.0\\fine-code-coverage\\build-output\\ToolsUnitTest.dll"
+  ],
+  "IsTelemetryOptedIn": false
+}
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.448, 4847895750141, datacollector.dll, TestPluginCache: Update extensions started. Skip filter = False
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.449, 4847895762435, datacollector.dll, TestPluginCache: Using directories for assembly resolution 'C:\Program Files\dotnet\sdk\5.0.402\Extensions'.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.449, 4847895763805, datacollector.dll, TestPluginCache: Updated the available extensions to 'C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll,C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.456, 4847895837286, datacollector.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: Collector.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.DataCollector.DataCollectorConfig TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollection.DataCollector
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.457, 4847895840723, datacollector.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.457, 4847895841606, datacollector.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: 
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.457, 4847895842148, datacollector.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.458, 4847895850309, datacollector.dll, AssemblyResolver.ctor: Creating AssemblyResolver with searchDirectories C:\Program Files\dotnet\sdk\5.0.402\Extensions,C:\Program Files\dotnet\sdk\5.0.402
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.459, 4847895865407, datacollector.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.459, 4847895867408, datacollector.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895868177, datacollector.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: 
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895868689, datacollector.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895869442, datacollector.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895870765, datacollector.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.402\Extensions,C:\Program Files\dotnet\sdk\5.0.402
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895871652, datacollector.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories C:\Program Files\dotnet\sdk\5.0.402\Extensions,C:\Program Files\dotnet\sdk\5.0.402
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895876884, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Resolving assembly.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.460, 4847895877882, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.402\Extensions'.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.461, 4847895884009, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.BlameDataCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll'.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.462, 4847895890034, datacollector.dll, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.BlameDataCollector, from path: C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll
+TpTrace Error: 0 : 75908, 1, 2021/10/23, 10:56:54.463, 4847895903212, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector" defined in "Microsoft.TestPlatform.Extensions.BlameDataCollector.dll" does not have ExtensionUri attribute.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.465, 4847895919769, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Resolving assembly.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.465, 4847895920975, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Searching in: 'C:\Program Files\dotnet\sdk\5.0.402\Extensions'.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.465, 4847895926368, datacollector.dll, AssemblyResolver.OnResolve: Microsoft.TestPlatform.Extensions.EventLogCollector: Loading assembly 'C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.466, 4847895930953, datacollector.dll, AssemblyResolver.OnResolve: Resolved assembly: Microsoft.TestPlatform.Extensions.EventLogCollector, from path: C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll
+TpTrace Error: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895950379, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.EventLogCollector.EventLogDataCollector" defined in "Microsoft.TestPlatform.Extensions.EventLogCollector.dll" does not have ExtensionUri attribute.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895955524, datacollector.dll, TestPluginCache: Discovered the extensions using extension path 'C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.BlameDataCollector.dll,C:\Program Files\dotnet\sdk\5.0.402\Extensions\Microsoft.TestPlatform.Extensions.EventLogCollector.dll'.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895956409, datacollector.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895956869, datacollector.dll, TestPluginCache: Executors are ''.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895957301, datacollector.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.468, 4847895957735, datacollector.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:54.469, 4847895959043, datacollector.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.470, 4847895975084, datacollector.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector
+TpTrace Error: 0 : 75908, 1, 2021/10/23, 10:56:54.471, 4847895980441, datacollector.dll, The type "Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector" defined in "Microsoft.TestPlatform.Extensions.BlameDataCollector.dll" does not have ExtensionUri attribute.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.478, 4847896048072, datacollector.dll, Listening on Endpoint : 127.0.0.1:63872
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.485, 4847896126664, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : DataCollection started.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:54.515, 4847896424462, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.TestHostLaunched) -> {
+  "ProcessId": 76116
+}
+TpTrace Information: 0 : 75908, 5, 2021/10/23, 10:56:54.740, 4847898676133, datacollector.dll, Using the buffer size of 16384 bytes
+TpTrace Information: 0 : 75908, 5, 2021/10/23, 10:56:54.740, 4847898677006, datacollector.dll, Accepted Client request and set the flag
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.500, 4847906273076, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.510, 4847906372045, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.513, 4847906398142, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCalculatePostfix - 784dfbdb-6a87-ec3e-111a-1e778e5b0fdd' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.528, 4847906554089, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.534, 4847906612695, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.541, 4847906687308, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCalculatePostfix - 784dfbdb-6a87-ec3e-111a-1e778e5b0fdd' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.563, 4847906902786, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.563, 4847906906449, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.563, 4847906907847, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestExpressionToHTML - ddbcd5cd-501c-3aed-b9f4-d0d080dfd7bc' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.564, 4847906917291, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.565, 4847906919852, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.565, 4847906921184, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestExpressionToHTML - ddbcd5cd-501c-3aed-b9f4-d0d080dfd7bc' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.566, 4847906929360, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.566, 4847906931561, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.566, 4847906932334, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestExpressionToString - 843a7382-759f-74f6-add7-7cd25a5eaf27' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.566, 4847906937970, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.567, 4847906939292, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.567, 4847906939998, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestExpressionToString - 843a7382-759f-74f6-add7-7cd25a5eaf27' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.567, 4847906945531, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.567, 4847906946810, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.568, 4847906953363, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestInfixToPostfix - cc4b185a-a498-c7c5-bc33-276ba09cfb0a' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.569, 4847906959252, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.569, 4847906960729, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.569, 4847906961441, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestInfixToPostfix - cc4b185a-a498-c7c5-bc33-276ba09cfb0a' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.569, 4847906967615, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.570, 4847906968968, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.570, 4847906969647, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestPostfixToTree - d6a38d23-9ab6-d6bd-ffb9-0723906abea9' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.573, 4847907006147, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.574, 4847907009402, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.574, 4847907011325, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestPostfixToTree - d6a38d23-9ab6-d6bd-ffb9-0723906abea9' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.575, 4847907020499, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.575, 4847907022565, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.575, 4847907023414, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestStringToExpression - f334232e-1373-e89b-5418-92798d5bdd6c' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.576, 4847907029205, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.576, 4847907030469, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.576, 4847907031178, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestStringToExpression - f334232e-1373-e89b-5418-92798d5bdd6c' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.577, 4847907042988, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.577, 4847907045429, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.577, 4847907046187, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestAddition - acb61e67-68c1-a189-ce2d-879f01082685' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.578, 4847907050316, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.578, 4847907051556, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.578, 4847907052231, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestAddition - acb61e67-68c1-a189-ce2d-879f01082685' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.578, 4847907057718, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.579, 4847907058934, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.579, 4847907059525, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestDivid - 1a978f58-96dc-6522-acde-3573ef51bd70' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.579, 4847907063444, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.580, 4847907071884, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.580, 4847907076275, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestDivid - 1a978f58-96dc-6522-acde-3573ef51bd70' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.582, 4847907089320, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.582, 4847907091633, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.582, 4847907092698, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestGCD - fc6f25d7-ae97-9e46-f7d7-80a01fbe6a32' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.583, 4847907099393, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.583, 4847907100797, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.583, 4847907101584, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestGCD - fc6f25d7-ae97-9e46-f7d7-80a01fbe6a32' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.613, 4847907406810, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.614, 4847907409933, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.614, 4847907411462, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestMultiply - bfad5444-62f3-4700-1669-6d80596dac31' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.615, 4847907418017, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.615, 4847907419697, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.615, 4847907420611, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestMultiply - bfad5444-62f3-4700-1669-6d80596dac31' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.615, 4847907426789, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.616, 4847907428922, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.616, 4847907429861, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestReduce - d321c65d-90a1-8e52-fb18-394dda5c9c34' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.617, 4847907440003, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.617, 4847907441735, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.617, 4847907442670, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestReduce - d321c65d-90a1-8e52-fb18-394dda5c9c34' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.618, 4847907448738, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.618, 4847907450283, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.618, 4847907451057, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestSubscribe - 15efa977-152d-6351-d4be-b45049d56f95' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.618, 4847907456498, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.619, 4847907458161, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.619, 4847907459048, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestSubscribe - 15efa977-152d-6351-d4be-b45049d56f95' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.619, 4847907465001, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.619, 4847907466731, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.619, 4847907467578, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToHTML - 04d95188-a37c-82bb-d541-f1d8be222a87' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.620, 4847907472773, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.620, 4847907474200, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.620, 4847907474997, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToHTML - 04d95188-a37c-82bb-d541-f1d8be222a87' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.621, 4847907481401, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.621, 4847907483210, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.621, 4847907484158, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 13d6ab53-c3a3-4cb6-504e-4dd5081ebd7d' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.622, 4847907492014, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.622, 4847907495661, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.622, 4847907496740, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 13d6ab53-c3a3-4cb6-504e-4dd5081ebd7d' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.623, 4847907504658, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.623, 4847907506419, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.623, 4847907507366, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCompareTo - 8ea5fe32-1dab-12b1-d05a-f530a27c0723' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.624, 4847907512503, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.624, 4847907514126, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.624, 4847907514960, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCompareTo - 8ea5fe32-1dab-12b1-d05a-f530a27c0723' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.625, 4847907520774, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.625, 4847907522286, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.625, 4847907523035, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 480efed5-aaba-4694-db99-4ceed54a531c' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.626, 4847907530095, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.626, 4847907533256, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.626, 4847907534671, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 480efed5-aaba-4694-db99-4ceed54a531c' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.627, 4847907545420, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.627, 4847907547725, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.628, 4847907548893, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestAddition - fd6c0969-1080-56aa-7c59-e4f1ed55b26a' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.628, 4847907556326, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.629, 4847907558399, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.629, 4847907559435, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestAddition - fd6c0969-1080-56aa-7c59-e4f1ed55b26a' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.630, 4847907569850, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.630, 4847907573367, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.630, 4847907575090, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestChangeType - bf5cab17-7e78-f488-87c4-90e5a0fd494b' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.635, 4847907622704, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.635, 4847907625208, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.635, 4847907626512, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestChangeType - bf5cab17-7e78-f488-87c4-90e5a0fd494b' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.637, 4847907646391, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.638, 4847907649166, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.638, 4847907650669, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCompareTo - ff00bb9c-6afb-2ac5-b13f-8a1dc7b40a0a' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.639, 4847907659396, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.639, 4847907661252, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.639, 4847907662249, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestCompareTo - ff00bb9c-6afb-2ac5-b13f-8a1dc7b40a0a' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.639, 4847907667965, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.640, 4847907669501, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.640, 4847907670274, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestDivid - 24845d19-ce8b-7b08-3759-6f89adc6fa6a' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.640, 4847907674932, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.640, 4847907676542, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.641, 4847907678599, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestDivid - 24845d19-ce8b-7b08-3759-6f89adc6fa6a' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.641, 4847907687493, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.642, 4847907689379, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.642, 4847907690293, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestInRange - ed9a66cb-e876-72a7-a50b-96499f61d0d0' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.642, 4847907696257, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.642, 4847907697822, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.643, 4847907698855, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestInRange - ed9a66cb-e876-72a7-a50b-96499f61d0d0' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.643, 4847907704965, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.643, 4847907707115, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.644, 4847907708315, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestMultiply - 9792bb3e-4048-e406-3038-c45caf13ddb4' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.644, 4847907717080, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.645, 4847907718935, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.645, 4847907719979, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestMultiply - 9792bb3e-4048-e406-3038-c45caf13ddb4' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.645, 4847907727678, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.646, 4847907729372, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.646, 4847907730114, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestSubscribe - 00679c8e-121c-0b14-11cc-bc01b7d8ea54' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.647, 4847907739211, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.647, 4847907743315, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.647, 4847907745295, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestSubscribe - 00679c8e-121c-0b14-11cc-bc01b7d8ea54' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.648, 4847907755564, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.649, 4847907758763, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.649, 4847907760115, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToHTML - bb3be503-cf86-4627-a39e-7f9263ed71de' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.649, 4847907767388, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.650, 4847907770350, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.650, 4847907771709, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToHTML - bb3be503-cf86-4627-a39e-7f9263ed71de' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.651, 4847907780042, datacollector.dll, DataCollectionTestCaseEventHandler: Test case starting.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.651, 4847907781757, datacollector.dll, Blame Collector : Test Case Start
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.651, 4847907782596, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 1eca5adc-a1ed-62a7-9e04-b0dd78b73203' started.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.652, 4847907789737, datacollector.dll, DataCollectionTestCaseEventHandler : Test case completing.
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.652, 4847907791360, datacollector.dll, Blame Collector : Test Case End
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.652, 4847907792247, datacollector.dll, DataCollectionTestCaseEventHandler: Test case 'TestToString - 1eca5adc-a1ed-62a7-9e04-b0dd78b73203' completed
+TpTrace Information: 0 : 75908, 7, 2021/10/23, 10:56:55.663, 4847907899011, datacollector.dll, DataCollectionTestCaseEventHandler: Test session ended
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.720, 4847908468612, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Datacollector received message: (DataCollection.AfterTestRunEnd) -> false
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908478723, datacollector.dll, Blame Collector : Session End
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908479804, datacollector.dll, BlameCollector.CollectDumpAndAbortTesthost: Custom path to dump directory was provided via VSTEST_DUMP_PATH. Skipping attachment upload, the caller is responsible for collecting and uploading the dumps themselves.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908481835, datacollector.dll, DataCollectionManager.CleanupPlugins: CleanupPlugins called
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908482587, datacollector.dll, DataCollectionManager.CleanupPlugins: Cleaning up 1 plugins
+TpTrace Verbose: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908484435, datacollector.dll, dataCollectorInfo.DisposeDataCollector: calling Dispose() on Microsoft.TestPlatform.Extensions.BlameDataCollector.BlameCollector
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.721, 4847908485648, datacollector.dll, DataCollectionManager.CleanupPlugins: CleanupPlugins finished
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.726, 4847908534024, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : Session End message received from server. Closing the connection.
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.726, 4847908536985, datacollector.dll, Closing the connection !
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.726, 4847908537735, datacollector.dll, DataCollectionRequestHandler.ProcessRequests : DataCollection completed
+TpTrace Information: 0 : 75908, 1, 2021/10/23, 10:56:55.727, 4847908538217, datacollector.dll, Program.Main: exiting datacollector process.

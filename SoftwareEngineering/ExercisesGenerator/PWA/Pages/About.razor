@@ -1,0 +1,102 @@
+﻿@page "/about"
+
+@inject NavigationManager NavigationManager
+
+<Affix OffsetTop="@(0)">
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("")'>
+        <Icon Type="home" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("settings")'>
+        <Icon Type="setting" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("generator")'>
+        <Icon Type="profile" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("exercise")'>
+        <Icon Type="edit" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("wrongs")'>
+        <Icon Type="close-square" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("statist")'>
+        <Icon Type="line-chart" Theme="outline" Style="font-size:x-large" />
+    </Button>
+</Affix>
+<h3>关于本应用</h3>
+<p>四则运算习题生成器 <small>V 2.0.4</small></p>
+<div class="card" id="developers">
+    <div class="card-header"><span class="oi oi-list"></span> 开发人员</div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 许正正
+                <span class="badge badge-info">
+                    <a href="https://jiafeimiao.top/" target="_blank">Blog</a>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 吴宁
+                <span class="badge badge-info">
+                    <a href="https://www.baidu.com" target="_blank">Blog</a>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 陈妍洁
+                <span class="badge badge-info">
+                    <a href="https://www.baidu.com" target="_blank">Blog</a>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 赵悦
+                <span class="badge badge-info">
+                    <a href="https://www.baidu.com" target="_blank">Blog</a>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 施睿
+                <span class="badge badge-info">
+                    <a href="https://www.baidu.com" target="_blank">Blog</a>
+                </span>
+            </li>
+            <li class="list-group-item">
+                <span class="oi oi-chevron-right"></span> 李秀吉
+                <span class="badge badge-info">
+                    <a href="https://www.baidu.com" target="_blank">Blog</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="card" id="conect">
+    <div class="card-header"><span class="oi oi-list"></span> 联系我们</div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="mailto:xuzhengzheng@outlook.com" target="_blank">
+                    <span class="oi oi-envelope-open"></span> 邮箱1
+                </a><br />
+                <a href="mailto:wn913457335@163.com" target="_blank">
+                    <span class="oi oi-envelope-open"></span> 邮箱2
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="https://github.com/JiaFeiMiao-K-Cat/Setting/issues"
+                   target="_blank">
+                    <span class="oi oi-link-intact"></span> Github Issues
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@page "/dbe"
+
+@inject IIndexedDbFactory DbFactory
+
+@inject IJSRuntime JS
+
+@inject NavigationManager NavigationManager
+
+<Form Model="statist" LabelColSpan="6" WrapperColSpan="16">
+    <FormItem Label="ID">
+        <AntDesign.InputNumber @bind-Value="@statist.Id">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label="日期">
+        <DatePicker @bind-Value="@statist.Date" Picker="@DatePickerType.Date" />
+    </FormItem>
+    <FormItem Label="错误次数">
+        <AntDesign.InputNumber @bind-Value="@statist.WrongTimes">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label="总次数">
+        <AntDesign.InputNumber @bind-Value="@statist.TotalTimes">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label="重做错误次数">
+        <AntDesign.InputNumber @bind-Value="@statist.RedoWrongTimes">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem Label="重做总次数">
+        <AntDesign.InputNumber @bind-Value="@statist.RedoTotalTimes">
+        </AntDesign.InputNumber>
+    </FormItem>
+    <FormItem>
+        <Button Type="@ButtonType.Primary"
+                OnClick="AddStatist"
+                HtmlType="submit">
+            添加数据
+        </Button>
+    </FormItem>
+</Form>

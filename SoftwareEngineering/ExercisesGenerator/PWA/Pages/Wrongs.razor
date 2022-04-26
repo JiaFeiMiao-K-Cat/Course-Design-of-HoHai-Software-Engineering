@@ -1,0 +1,150 @@
+﻿@page "/wrongs"
+
+@inject IIndexedDbFactory DbFactory
+
+@inject IJSRuntime JS
+
+@inject NavigationManager NavigationManager
+
+@inject MessageService _message
+
+<Spin Spinning=@IsLoading Delay=0>
+    <Affix OffsetTop="@(0)">
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("")'>
+            <Icon Type="home" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("settings")'>
+            <Icon Type="setting" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("generator")'>
+            <Icon Type="profile" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("exercise")'>
+            <Icon Type="edit" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("statist")'>
+            <Icon Type="line-chart" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        <Button Type="@ButtonType.Primary"
+                Shape="@ButtonShape.Circle"
+                OnClick='() => NavigationManager.NavigateTo("about")'>
+            <Icon Type="info" Theme="outline" Style="font-size:x-large" />
+        </Button>
+        @if (RedoMode)
+        {
+            <AntDesign.Title Level="4">
+                @RedoCount / @redoWrongs.Count
+            </AntDesign.Title>
+            <AntDesign.Title Level="4"
+                             Style="display:table;margin:0 auto;">
+                @("剩余 " + counter + " 秒")
+            </AntDesign.Title>
+        }
+    </Affix>
+
+    <Switch @bind-Value="@RedoMode"
+            CheckedChildren="重做模式"
+            UnCheckedChildren="重做模式" />
+
+    @if (!RedoMode)
+    {
+        <Table TItem="Tools.WrongProblem"
+                DataSource="@wrongs.Skip((pageIndex-1)*pageSize).Take(pageSize)"
+                Responsive="false"
+                Bordered=@true
+                PageSize="@pageSize">
+            <ChildContent>
+                <AntDesign.Column @bind-Field="@context.ProblemHTML">
+                    @(new MarkupString(context.ProblemHTML))
+                </AntDesign.Column>
+                <AntDesign.Column Title="错误率" @bind-Field="@context.WrongRate" Sortable
+                                    SorterCompare="@((v1, v2)=>v1.CompareTo(v2))">
+                    @((100 * context.WrongRate).ToString("0.00")) %
+                </AntDesign.Column>
+                <AntDesign.Column @bind-Field="@context.FirstDate" Format="yyyy-MM-dd" Sortable />
+                <ActionColumn>
+                    <Space>
+                        <SpaceItem><Button Danger OnClick="() => Delete(context.Id)">删除</Button></SpaceItem>
+                    </Space>
+                </ActionColumn>
+            </ChildContent>
+            <PaginationTemplate>
+                <div style="display: flex; align-items: center">
+                    <Pagination Class="my-custom-pagination"
+                                Total="@wrongs.Count"
+                                PageSize="pageSize"
+                                Current="pageIndex"
+                                ShowSizeChanger="@true"
+                                OnChange="HandlePageChange" />
+                </div>
+            </PaginationTemplate>
+        </Table>
+    }
+    else
+    {
+        <div style="display:table;margin:0 auto;">
+            <p style="display:table;margin:0 auto; font-size:larger;">@(new MarkupString(Tools.Expression.ExpressionToHTML(@Problem)))</p>
+            <p></p>
+            @if (IsFirstProblem)
+            {
+                <Button Type="@ButtonType.Primary"
+                        @onclick="NextProblem"
+                        Icon="edit"
+                        Style="display:table;margin:0 auto;">
+                    开始
+                </Button>
+            }
+            <p></p>
+            <div id="answer" style="display:table;margin:0 auto;">
+                <EditForm Model="@inputModel" OnValidSubmit="@Check">
+                    @if (IsFraction)
+                    {
+                        <div class="fraction" style="display:table;margin:0 auto;">
+                            <div class="col-4 top" style="display:table;margin:0 auto;">
+                                <input class="form-control" @bind="@inputModel.Numerator" />
+                            </div>
+                            <div class="col-4 bottom" style="display:table;margin:0 auto;">
+                                <input class="form-control" @bind="@inputModel.Denomination" />
+                            </div>
+                        </div>
+                    }
+                    @if (IsInteger)
+                    {
+                        <div class="col-4" style="display:table;margin:0 auto;">
+                            <input class="form-control" @bind="@inputModel.Integer" />
+                        </div>
+                    }
+                </EditForm>
+                <p></p>
+                <div style="display:table;margin:0 auto;">
+                    <span class="@CheckStyle"></span>
+                </div>
+                <p></p>
+                <Button Type="@ButtonType.Primary"
+                        HtmlType="submit"
+                        @onclick="Check"
+                        Icon="check-square"
+                        Style="display:table;margin:0 auto;">
+                    提交
+                </Button>
+                <Button Type="@ButtonType.Default"
+                        @onclick="SkipProblem"
+                        Icon="step-forward"
+                        Style="display:table;margin:0 auto;"
+                        Danger>
+                    跳过
+                </Button>
+            </div>
+        </div>
+    }
+</Spin>

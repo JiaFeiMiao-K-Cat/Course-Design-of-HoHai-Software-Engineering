@@ -1,0 +1,68 @@
+﻿@page "/generator"
+
+@inject IIndexedDbFactory DbFactory
+
+@inject IJSRuntime JS
+
+@inject NavigationManager NavigationManager
+
+<Affix OffsetTop="@(0)">
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("")'>
+        <Icon Type="home" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("settings")'>
+        <Icon Type="setting" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("exercise")'>
+        <Icon Type="edit" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("wrongs")'>
+        <Icon Type="close-square" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("statist")'>
+        <Icon Type="line-chart" Theme="outline" Style="font-size:x-large" />
+    </Button>
+    <Button Type="@ButtonType.Primary"
+            Shape="@ButtonShape.Circle"
+            OnClick='() => NavigationManager.NavigateTo("about")'>
+        <Icon Type="info" Theme="outline" Style="font-size:x-large" />
+    </Button>
+</Affix>
+
+<div style="display:table;margin:0 auto;">
+    <Button OnClick="Generate" Icon="diff" Type="@ButtonType.Primary">生成习题</Button>
+    <br />
+    <Button OnClick="Print" Icon="printer" Type="@ButtonType.Primary">打印习题</Button>
+</div>
+<Switch @bind-Checked="Hidden" CheckedChildren="显示答案" UnCheckedChildren="隐藏答案" />
+<div id="PrintDiv">
+    <Table TItem="Tools.TableData.Exercise"
+           DataSource="@tableData.Exercises"
+           Bordered=@true
+           PageSize="1000"
+           HidePagination="@true"
+           Responsive="false">
+        <AntDesign.Column Title="编号" Field="@context.Number">
+
+        </AntDesign.Column>
+        <AntDesign.Column Title="题目" Field="@context.Problem">
+            @(new MarkupString(Tools.Expression.ExpressionToHTML(context.Problem)))
+        </AntDesign.Column>
+        <AntDesign.Column Title="答案" Field="@context.Answer" Hidden="@Hidden">
+            @(new MarkupString(context.Answer.ToHTML()))
+        </AntDesign.Column>
+        <AntDesign.Column Title="答案" Field="@context.Answer" Hidden="@(!Hidden)">
+            <span></span>
+        </AntDesign.Column>
+    </Table>
+</div>
